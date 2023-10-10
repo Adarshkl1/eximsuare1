@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Eximsquare</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+.alertmessage {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  z-index: 9999;
+}
+
+.alert {
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.alert-info {
+  background-color: #268576; 
+  color: #fff; 
+}
+
+.exim-icon {
+  padding: 11px;
+  font-size: 35px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.exim-icon {
+    opacity: 0.7;
+}
+
+.exim-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+
+.exim-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.exim-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.exim-instagram {
+  background: #125688;
+  color: white;
+}
+
+  </style>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+  <body class="w3-light-grey">
+
+<%= render '/layouts/nav' %>
+<%= notice %>
+<%= alert %>
+<div class="alertmessage">
+  <% flash.each do |type, msg| %>
+    <div class="alert alert-info">
+      <%= msg %>
+    </div>
+  <% end %>
+</div>
+
+<span class="yield"><%= yield %></span>
+<%= render '/layouts/footer' %>
+
+<style>
+
+</style>
+</body>
+</html>
+
+
+

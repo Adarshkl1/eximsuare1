@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Eximsquare</title>
+
+<style>
+    .container-fluid { background-image: url(<%= asset_path 'exim_square2.jpg' %>) }
+</style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7201484819730179"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="body container-fluid">
+<div class="sign-up-fluid w3-container w3-content" style="max-width:1400px;margin-top:60px"> 
+
+<div class="col-md-8 col-sm-8 col-md-offset-2 col-sm-offset-2">
+<div class="w3-panel w3-card w3-white">
+
+</br>
+</br>
+<h2 class="text-center sign-head w3-text-teal"><b>Forgot your password?</b></h2>
+</br>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name),html: { data: { turbo: false} }, html: { method: :post }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",:maxlength=>"80",class: "form-control"  %>
+  </div>
+</br>
+  <div class="actions">
+    <%= f.submit "Reset Password",class: "w3-teal w3-btn"%>
+  </div>
+<% end %>
+</br>
+<b class="w3-text-teal"><%= render "devise/shared/links" %></b>
+</br>
+</br>
+</br>
+</div>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</div>
+
+</div>
+</div>
+</body>
+</html>
