@@ -7539,3 +7539,4 @@ name: "Indias director General of Trade Remedies (DGTR) has recommended to conti
 link: "https://www.fibre2fashion.com/news/textile-news/india-s-dgtr-recommends-continuing-add-on-jute-imports-from-bangladesh-284265-newsdetails.htm",
 product: "fiber")
 
+
